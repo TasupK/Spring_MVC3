@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.java.freeboard.mapper.MemberSQLMapper">
+
+	<select id="selectNow" resultType="String">
+		SELECT NOW()
+	</select>
+	
+	<select id="getMemberByIdAndPw" parameterType="com.java.freeboard.vo.MemberVO" resultType="com.java.freeboard.vo.MemberVO">
+		SELECT *
+		FROM fb_member 
+		WHERE 
+			member_id = #{member_id}
+		AND member_pw = #{member_pw}
+	</select>
+	
+	<insert id="insertMember" parameterType="com.java.freeboard.vo.MemberVO">
+		INSERT INTO fb_member(member_id, member_pw, member_name, member_gender)
+		VALUES (#{member_id}, #{member_pw}, #{member_name}, #{member_gender})
+	</insert>
+
+</mapper>
