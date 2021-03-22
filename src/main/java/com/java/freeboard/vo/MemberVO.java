@@ -17,6 +17,7 @@ public class MemberVO {
 	private String member_gender;
 	private Date reg_date;
 	
+	
 	/////////////////////////
 	
 	

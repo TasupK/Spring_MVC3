@@ -24,7 +24,7 @@
 
        
    <br>
-   <%-- <table border="1">
+   <table border="1">
    <tr>
      <td>글번호</td>
       <td>제목</td>
@@ -32,16 +32,15 @@
      <td>작성일</td>
      <td>조회수</td>
   </tr>
-   <c:forEach items="${datalist}" var="boardlist">
-   <tr>
-      <td>${boardlist.boardVo.board_no}</td>
-      <td><a href="${pageContext.request.contextPath}/board/read_content_page.do?board_no=${boardlist.boardVo.board_no}">${boardlist.boardVo.board_title}</a></td>
-      <td>${boardlist.memberVo.member_no}</td>
-      <td>${boardlist.boardVo.board_writedate}</td>
-      <td>${boardlist.boardVo.board_readcount}</td>
+  <c:forEach items="${boardList}" var="boardInfoList">
+    <tr>
+      <td>${boardInfoList.boardVo.board_no}</td>
+      <td>${boardInfoList.boardVo.board_title}</td>
+       <td>${boardInfoList.boardVo.board_content}</td>
+      <td>${boardInfoList.boardVo.reg_date}</td>
      </tr>
-     </c:forEach>
-   </table> --%>
+  </c:forEach>
+   </table>
    <br>   
 </body>
 </html>

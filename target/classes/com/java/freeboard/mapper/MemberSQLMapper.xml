@@ -19,5 +19,7 @@
 		INSERT INTO fb_member(member_id, member_pw, member_name, member_gender)
 		VALUES (#{member_id}, #{member_pw}, #{member_name}, #{member_gender})
 	</insert>
+	
+
 
 </mapper>
