@@ -5,16 +5,17 @@
 
 	<select id="selectBoard" resultType="com.java.freeboard.vo.BoardVO">
 		SELECT 
-			board_no
-			,member_no
-			,board_title
-			,board_content
-			,reg_date
-		FROM fb_board
+			fb.board_no
+			,fm.member_name
+			,fb.board_title
+			,fb.board_content
+			,fb.reg_date
+		FROM fb_board as fb, fb_member fm
+		WHERE fb.member_no = fm.member_no 
 		ORDER BY board_no DESC
 	</select>
 	
-	<select id="getBoard" resultType="com.java.freeboard.vo.BoardVO">
+	<select id="getBoard" resultType="com.java.freeboard.vo.BoardVO" parameterType="com.java.freeboard.vo.BoardVO">
 		SELECT 
 			board_no
 			,member_no
@@ -29,8 +30,9 @@
 	</select>
 	
 	<insert id="insertBoard" parameterType="com.java.freeboard.vo.BoardVO">
-		INSERT INTO fb_board(board_title, board_content)
-		VALUES (#{board_title}, #{board_content});
+		INSERT INTO fb_board(board_title, board_content, member_no)
+		VALUES (#{board_title}, #{board_content}, #{member_no});
 	</insert>
+	
 	
 </mapper>

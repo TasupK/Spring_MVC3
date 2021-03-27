@@ -11,25 +11,28 @@ public class BoardVO {
 	private int board_count;
 	private Date reg_date;
 	private String mod_id;
-	private Date mod_date;	
+	private Date mod_date;
+	private MemberVO member_name;
 	
 	/////////////////////////////////
-	
+
+
 	public BoardVO() {
 		super();
 	}
 	
 	public BoardVO(int board_no, int member_no, String board_title, String board_content, int board_count,
-			Date reg_date, String mod_id, Date mod_date) {
+			Date reg_date, String mod_id, Date mod_date, MemberVO member_name) {
 		super();
-		this.board_no = board_no;
-		this.member_no = member_no;
-		this.board_title = board_title;
-		this.board_content = board_content;
+		this.board_no = board_no; 
+		this.member_no = member_no; 
+		this.board_title = board_title; 
+		this.board_content = board_content; 
 		this.board_count = board_count;
 		this.reg_date = reg_date;
 		this.mod_id = mod_id;
 		this.mod_date = mod_date;
+		this.member_name = member_name;
 	}
 	
 	////////////////////////////////////
@@ -82,6 +85,14 @@ public class BoardVO {
 	}
 	public void setMod_date(Date mod_date) {
 		this.mod_date = mod_date;
+	}
+	
+	public MemberVO getMember_name() {
+		return member_name;
+	}
+
+	public void setMember_name(MemberVO member_name) {
+		this.member_name = member_name;
 	}
 	
 

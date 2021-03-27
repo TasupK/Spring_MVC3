@@ -27,16 +27,15 @@
    <table border="1">
    <tr>
      <td>글번호</td>
-      <td>제목</td>
-     <td>작성자</td>
+      <td>작성자</td>
+     <td>제목</td>
      <td>작성일</td>
-     <td>조회수</td>
   </tr>
   <c:forEach items="${boardList}" var="boardInfoList">
     <tr>
-      <td>${boardInfoList.boardVo.board_no}</td>
-      <td>${boardInfoList.boardVo.board_title}</td>
-       <td>${boardInfoList.boardVo.board_content}</td>
+      <td>${boardInfoList.boardVo.board_no} </td>
+      <td>${boardInfoList.boardVo. }</td>
+      <td><a href="${pageContext.request.contextPath}/board/read_content_page.do?board_no=${boardInfoList.boardVo.board_no}">${boardInfoList.boardVo.board_title}</a></td>
       <td>${boardInfoList.boardVo.reg_date}</td>
      </tr>
   </c:forEach>
