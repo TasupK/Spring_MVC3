@@ -47,4 +47,11 @@ public class BoardController {
 		return "redirect:/board/main_page.do";
 	}
 	
+	@RequestMapping(value = "/read_content_page.do")
+	public String read_content_page(Model model, int board_no) {
+		Map<String,Object> boardMap = boardService.getBoard(board_no);
+		model.addAttribute("boardMap", boardMap);
+		return "/board/read_content_page";
+	}
+	
 }

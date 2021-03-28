@@ -6,7 +6,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>[메인페이지]</title>
 </head>
 <body>
 <c:choose>
@@ -24,7 +28,7 @@
 
        
    <br>
-   <table border="1">
+   <table border="1" class="table table-dark table-striped">
    <tr>
      <td>글번호</td>
       <td>작성자</td>
@@ -34,7 +38,7 @@
   <c:forEach items="${boardList}" var="boardInfoList">
     <tr>
       <td>${boardInfoList.boardVo.board_no} </td>
-      <td>${boardInfoList.boardVo. }</td>
+      <td>${boardInfoList.memberVo.member_name}</td>
       <td><a href="${pageContext.request.contextPath}/board/read_content_page.do?board_no=${boardInfoList.boardVo.board_no}">${boardInfoList.boardVo.board_title}</a></td>
       <td>${boardInfoList.boardVo.reg_date}</td>
      </tr>

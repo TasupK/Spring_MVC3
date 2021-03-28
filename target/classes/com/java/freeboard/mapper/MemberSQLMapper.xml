@@ -15,6 +15,17 @@
 		AND member_pw = #{member_pw}
 	</select>
 	
+	<select id="selectByNo" resultType="com.java.freeboard.vo.MemberVO">
+		SELECT
+			member_no 
+			,member_id
+			,member_pw
+			,member_name
+			,member_gender
+		FROM fb_member
+		WHERE member_no = #{member_no}
+	</select>
+	
 	<insert id="insertMember" parameterType="com.java.freeboard.vo.MemberVO">
 		INSERT INTO fb_member(member_id, member_pw, member_name, member_gender)
 		VALUES (#{member_id}, #{member_pw}, #{member_name}, #{member_gender})

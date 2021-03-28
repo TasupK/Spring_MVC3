@@ -10,4 +10,5 @@ public interface MemberSQLMapper {
 	//로그인 메소드
 	public MemberVO getMemberByIdAndPw(MemberVO memberVO);
 	public void insertMember(MemberVO memberVO);
+	public MemberVO selectByNo(int no);
 }

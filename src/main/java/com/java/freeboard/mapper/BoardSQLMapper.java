@@ -9,7 +9,7 @@ import com.java.freeboard.vo.BoardVO;
 @Mapper
 public interface BoardSQLMapper {
 	public List<BoardVO> selectBoard();
-	public BoardVO getBoard(BoardVO boardVO);
+	public BoardVO getBoard(int board_no);
 	public void insertBoard(BoardVO boardVO);
 
 }

@@ -5,22 +5,22 @@
 
 	<select id="selectBoard" resultType="com.java.freeboard.vo.BoardVO">
 		SELECT 
-			fb.board_no
-			,fm.member_name
-			,fb.board_title
-			,fb.board_content
-			,fb.reg_date
-		FROM fb_board as fb, fb_member fm
-		WHERE fb.member_no = fm.member_no 
+			board_no
+			,member_no
+			,board_title
+			,board_content
+			,reg_date
+		FROM fb_board
 		ORDER BY board_no DESC
 	</select>
 	
-	<select id="getBoard" resultType="com.java.freeboard.vo.BoardVO" parameterType="com.java.freeboard.vo.BoardVO">
+	<select id="getBoard" resultType="com.java.freeboard.vo.BoardVO" parameterType="int">
 		SELECT 
 			board_no
 			,member_no
 			,board_title
 			,board_content
+			,board_count
 			,reg_date
 			,mod_id
 			,mod_date
