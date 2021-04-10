@@ -16,14 +16,14 @@
 <c:choose>
 	<c:when test="${!empty sessionUserData}">
 		${sessionUserData.member_name}님 환영합니다.<br>
-		<a href="${pageContext.request.contextPath}/member/logout_process.do">로그아웃</a>
+		<a href="${pageContext.request.contextPath}/member/logout_process.do" class="btn btn-secondary btn-sm">로그아웃</a>
 		</c:when>
 	<c:otherwise>
-	비회원 접근 --- <a href="${pageContext.request.contextPath}/member/login.do">로그인</a>
+	비회원 접근 --- <a href="${pageContext.request.contextPath}/member/login.do" class="btn btn-primary btn-sm">로그인</a>
 	</c:otherwise>
 </c:choose>
 <c:if test="${!empty sessionUserData}">
-	<a href="${pageContext.request.contextPath}/board/write_content_page.do">글쓰기</a>
+	<a href="${pageContext.request.contextPath}/board/write_content_page.do" class="btn btn-outline-dark btn-sm">글쓰기</a>
 </c:if>
 
        

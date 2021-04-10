@@ -11,5 +11,6 @@ public interface BoardSQLMapper {
 	public List<BoardVO> selectBoard();
 	public BoardVO getBoard(int board_no);
 	public void insertBoard(BoardVO boardVO);
-
+	public void deleteBoard(BoardVO boardVO);
+	public void updateBoard(BoardVO boardVO);
 }

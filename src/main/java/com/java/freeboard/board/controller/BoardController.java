@@ -54,4 +54,22 @@ public class BoardController {
 		return "/board/read_content_page";
 	}
 	
+	@RequestMapping(value = "/delete_content_process.do")
+	public String delete_content_process(BoardVO boardVO) {
+		boardService.deleteBoard(boardVO);
+		return "redirect:/board/main_page.do";
+	}
+	
+	@RequestMapping(value = "/update_content_page.do")
+	public String update_content_page(Model model, int board_no) {
+		Map<String,Object> boardMap = boardService.getBoard(board_no);
+		model.addAttribute("boardMap", boardMap);
+		return "/board/update_content_page";
+	}
+	
+	@RequestMapping(value = "/update_content_process.do")
+	public String update_content_process(BoardVO boardVO) {
+		boardService.updateBoard(boardVO);
+		return "redirect:/board/main_page.do";
+	}
 }

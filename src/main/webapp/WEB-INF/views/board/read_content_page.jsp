@@ -13,9 +13,10 @@
 조회수 : ${boardMap.boardVo.board_count}<br>
 내용 : ${boardMap.boardVo.board_content}<br>
 <a href="${pageContext.request.contextPath}/board/main_page.do">목록으로</a>
-<c:if test="${!empty sessionUser && sessionUser.member_no == key.memberVo.member_no }">
-<a href="${pageContext.request.contextPath}/board/delete_content_process.do?board_no=">삭제</a>
-<a href="${pageContext.request.contextPath}/board/update_content_page.do?board_no=">수정</a>
-</c:if>
+
+<a href="${pageContext.request.contextPath}/board/delete_content_process.do?board_no=${boardMap.boardVo.board_no}">삭제</a>
+<a href="${pageContext.request.contextPath}/board/update_content_page.do?board_no=${boardMap.boardVo.board_no}">수정</a>
+
+
 </body>
 </html>

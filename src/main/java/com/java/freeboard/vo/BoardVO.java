@@ -9,10 +9,9 @@ public class BoardVO {
 	private String board_title;
 	private String board_content;
 	private int board_count;
-	private Date reg_date;
+	private String reg_date;
 	private String mod_id;
-	private Date mod_date;
-	private MemberVO member_name;
+	private String mod_date;
 	
 	/////////////////////////////////
 
@@ -22,7 +21,7 @@ public class BoardVO {
 	}
 	
 	public BoardVO(int board_no, int member_no, String board_title, String board_content, int board_count,
-			Date reg_date, String mod_id, Date mod_date, MemberVO member_name) {
+			String reg_date, String mod_id, String mod_date) {
 		super();
 		this.board_no = board_no; 
 		this.member_no = member_no; 
@@ -32,7 +31,6 @@ public class BoardVO {
 		this.reg_date = reg_date;
 		this.mod_id = mod_id;
 		this.mod_date = mod_date;
-		this.member_name = member_name;
 	}
 	
 	////////////////////////////////////
@@ -68,10 +66,10 @@ public class BoardVO {
 	public void setBoard_count(int board_count) {
 		this.board_count = board_count;
 	}
-	public Date getReg_date() {
+	public String getReg_date() {
 		return reg_date;
 	}
-	public void setReg_date(Date reg_date) {
+	public void setReg_date(String reg_date) {
 		this.reg_date = reg_date;
 	}
 	public String getMod_id() {
@@ -80,19 +78,11 @@ public class BoardVO {
 	public void setMod_id(String mod_id) {
 		this.mod_id = mod_id;
 	}
-	public Date getMod_date() {
+	public String getMod_date() {
 		return mod_date;
 	}
-	public void setMod_date(Date mod_date) {
+	public void setMod_date(String mod_date) {
 		this.mod_date = mod_date;
-	}
-	
-	public MemberVO getMember_name() {
-		return member_name;
-	}
-
-	public void setMember_name(MemberVO member_name) {
-		this.member_name = member_name;
 	}
 	
 

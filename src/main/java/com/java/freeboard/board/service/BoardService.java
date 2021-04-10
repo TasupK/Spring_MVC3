@@ -50,7 +50,14 @@ public class BoardService {
 	}
 	
 	public void insertBoard(BoardVO boardVO) {
-		boardmapper.insertBoard(boardVO);
-		
+		boardmapper.insertBoard(boardVO);	
+	}
+	
+	public void deleteBoard(BoardVO boardVO) {
+		boardmapper.deleteBoard(boardVO);
+	}
+	
+	public void updateBoard(BoardVO boardVO) {
+		boardmapper.updateBoard(boardVO);
 	}
 }
